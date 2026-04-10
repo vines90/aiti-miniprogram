@@ -1,16 +1,51 @@
 <view class="page safe-bottom" wx:if="{{ type }}">
+  <view class="celebrate">✦</view>
   <view class="result-card">
-    <text class="label">你的人格类型是</text>
-    <text class="tag">{{ type.tag }}</text>
+    <view class="card-shine"></view>
+    <view class="result-header">
+      <text class="label">你的人格类型</text>
+      <view class="tag-pill">{{ type.tag }}</view>
+    </view>
     <text class="name">{{ type.name }}</text>
     <text class="en">{{ type.en }}</text>
-    <view class="line"></view>
-    <text class="desc">{{ line }}</text>
+    <view class="divider">
+      <view class="divider-dot"></view>
+    </view>
+    <view class="desc-box">
+      <view class="desc-bar"></view>
+      <text class="desc">{{ line }}</text>
+    </view>
   </view>
-  <button class="btn-share" open-type="share">分享给好友</button>
-  <button class="btn-ghost" bindtap="onAgain">再测一次</button>
+
+  <button
+    class="btn-share"
+    hover-class="hover-primary"
+    hover-start-time="12"
+    hover-stay-time="80"
+    open-type="share"
+  >
+    <text class="btn-share-txt">分享给好友</text>
+  </button>
+  <button
+    class="btn-ghost"
+    hover-class="hover-surface"
+    hover-start-time="10"
+    hover-stay-time="70"
+    bindtap="onAgain"
+  >
+    再测一次
+  </button>
 </view>
-<view class="page empty" wx:else>
-  <text class="empty-text">暂无结果，请先完成测试</text>
-  <button class="btn-ghost" bindtap="onHome">返回首页</button>
+
+<view class="page empty safe-bottom" wx:else>
+  <text class="empty-icon">◇</text>
+  <text class="empty-text">暂无结果</text>
+  <text class="empty-sub">先完成测试，看看你是哪种 AI 人</text>
+  <button
+    class="btn-ghost btn-ghost-wide"
+    hover-class="hover-surface"
+    bindtap="onHome"
+  >
+    返回首页
+  </button>
 </view>

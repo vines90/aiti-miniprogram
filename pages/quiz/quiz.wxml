@@ -1,24 +1,44 @@
 <view class="page safe-bottom">
-  <view class="progress-row">
-    <text class="progress-num">{{ currentIndex + 1 }}</text>
-    <text class="progress-sep">/</text>
-    <text class="progress-total">{{ total }}</text>
+  <view class="top-bar">
+    <text class="brand">AITI</text>
+    <view class="step-pill">
+      <text class="step-label">第</text>
+      <text class="step-num">{{ currentIndex + 1 }}</text>
+      <text class="step-label">题</text>
+    </view>
   </view>
-  <view class="progress-bar">
-    <view class="progress-fill" style="width: {{ progressPercent }}%;"></view>
+
+  <view class="progress-wrap">
+    <view class="progress-meta">
+      <text class="remain">剩余 {{ remaining }} 题</text>
+      <text class="pct">{{ progressPercentInt }}%</text>
+    </view>
+    <view class="progress-track">
+      <view class="progress-fill" style="width: {{ progressPercent }}%;"></view>
+    </view>
   </view>
+
   <view class="card">
+    <view class="card-accent"></view>
+    <view class="q-row">
+      <text class="q-index">Q{{ currentIndex + 1 }}</text>
+    </view>
     <text class="q-text">{{ question.text }}</text>
   </view>
+
   <view class="options">
     <button
       wx:for="{{ question.options }}"
-      wx:key="text"
+      wx:for-index="optIdx"
+      wx:key="optIdx"
       class="opt"
-      data-index="{{ index }}"
+      hover-class="hover-surface"
+      hover-start-time="10"
+      hover-stay-time="70"
+      data-index="{{ optIdx }}"
       bindtap="onPick"
     >
-      <text class="opt-label">{{ labels[index] }}</text>
+      <view class="opt-badge">{{ labels[optIdx] }}</view>
       <text class="opt-text">{{ item.text }}</text>
     </button>
   </view>

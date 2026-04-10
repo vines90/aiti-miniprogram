@@ -1,12 +1,22 @@
 const { QUESTIONS, computeResult } = require('../../utils/questions.js')
 const app = getApp()
 
+function calcMeta(idx) {
+  const total = QUESTIONS.length
+  const remaining = total - idx
+  const progressPercent = (idx / total) * 100
+  const progressPercentInt = Math.round(progressPercent)
+  return { remaining, progressPercent, progressPercentInt }
+}
+
 Page({
   data: {
     total: QUESTIONS.length,
     currentIndex: 0,
     question: QUESTIONS[0],
     progressPercent: 0,
+    progressPercentInt: 0,
+    remaining: QUESTIONS.length,
     labels: ['A', 'B', 'C', 'D']
   },
 
@@ -21,11 +31,11 @@ Page({
       wx.redirectTo({ url: '/pages/result/result' })
       return
     }
-    const progressPercent = (idx / QUESTIONS.length) * 100
+    const meta = calcMeta(idx)
     this.setData({
       currentIndex: idx,
       question: QUESTIONS[idx],
-      progressPercent
+      ...meta
     })
   },
 
@@ -40,11 +50,11 @@ Page({
       return
     }
     const next = answers.length
-    const progressPercent = (next / QUESTIONS.length) * 100
+    const meta = calcMeta(next)
     this.setData({
       currentIndex: next,
       question: QUESTIONS[next],
-      progressPercent
+      ...meta
     })
   }
 })

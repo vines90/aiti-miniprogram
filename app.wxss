@@ -1,12 +1,47 @@
+/**
+ * AITI 全局样式 — 深色霓虹 + 紫青渐变
+ */
 page {
+  --bg-base: #0a0812;
+  --bg-elevated: rgba(22, 18, 36, 0.72);
+  --line-subtle: rgba(255, 255, 255, 0.08);
+  --text: #ece9f7;
+  --text-muted: rgba(236, 233, 247, 0.52);
+  --text-dim: rgba(236, 233, 247, 0.32);
+  --cyan: #6ee7ff;
+  --violet: #a78bfa;
+  --violet-deep: #7c3aed;
+  --radius-lg: 28rpx;
+  --radius-md: 22rpx;
+  --shadow-glow: 0 20rpx 64rpx rgba(110, 231, 255, 0.12);
+
   font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
     'Microsoft YaHei', sans-serif;
-  background: #12101a;
-  color: #e8e6f2;
+  background-color: var(--bg-base);
+  background-image: radial-gradient(
+      ellipse 120% 80% at 50% -30%,
+      rgba(110, 231, 255, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(ellipse 70% 50% at 100% 40%, rgba(167, 139, 250, 0.1), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 0% 90%, rgba(124, 58, 237, 0.08), transparent 45%);
+  color: var(--text);
   min-height: 100vh;
   box-sizing: border-box;
 }
 
 .safe-bottom {
-  padding-bottom: env(safe-area-inset-bottom);
+  padding-bottom: calc(24rpx + env(safe-area-inset-bottom));
+}
+
+/* 主按钮按压 */
+.hover-primary {
+  opacity: 0.88;
+  transform: scale(0.985);
+}
+
+/* 选项/幽灵按钮按压 */
+.hover-surface {
+  opacity: 0.92;
+  transform: scale(0.992);
 }

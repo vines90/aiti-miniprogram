@@ -1,13 +1,32 @@
 <view class="page safe-bottom">
+  <view class="brand-mark">◇</view>
   <view class="hero">
-    <view class="badge">纯好玩 · 引流向</view>
+    <view class="badge-row">
+      <text class="badge">纯好玩</text>
+      <text class="badge-dot">·</text>
+      <text class="badge">轻量引流</text>
+    </view>
     <text class="title">AITI</text>
+    <view class="title-underline"></view>
     <text class="subtitle">AI 使用者人格测试</text>
     <text class="hook">你是什么 AI 人？</text>
   </view>
-  <view class="meta">
-    <text class="meta-line">24 题 · 12 种人格 · 选完即出结果</text>
+
+  <view class="chips">
+    <view class="chip"><text class="chip-num">24</text><text class="chip-txt">道题</text></view>
+    <view class="chip"><text class="chip-num">12</text><text class="chip-txt">种人格</text></view>
+    <view class="chip chip-wide"><text class="chip-txt">选完即出结果</text></view>
   </view>
-  <button class="btn-start" bindtap="onStart">开始测试</button>
-  <view class="footer-note">结果仅供娱乐</view>
+
+  <button
+    class="btn-start"
+    hover-class="hover-primary"
+    hover-start-time="12"
+    hover-stay-time="80"
+    bindtap="onStart"
+  >
+    <text class="btn-start-inner">开始测试</text>
+  </button>
+  <text class="hint">大约 2～3 分钟 · 无对错</text>
+  <text class="footer-note">结果仅供娱乐</text>
 </view>

@@ -6,9 +6,9 @@
   ],
   "window": {
     "navigationBarTitleText": "AITI",
-    "navigationBarBackgroundColor": "#12101a",
+    "navigationBarBackgroundColor": "#0a0812",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#12101a",
+    "backgroundColor": "#0a0812",
     "backgroundTextStyle": "light"
   },
   "style": "v2",
