@@ -14,6 +14,11 @@ AI 使用者人格测试（24 题 · 12 种类型），计分规则与题库见 
 - 选 A/B/C/D 分别向对应类型加 1/2/3/4 分，总分最高者胜出；同分取类型编号更小者。
 - 「分享给好友」使用微信分享；「再测一次」会清空答题状态并重新开始。
 
+## 人格立绘素材（Seedream）
+
+- 十二种人格的扁平矢量风全身立绘见 **`assets/characters/*.jpeg`**，风格参考 `assets/ref-mbti-style.png`。
+- 使用 **火山方舟 Seedream 4.0** 图文生图生成；重新出图与说明见 `assets/characters/README.md` 与 `scripts/generate_aiti_avatars.py`。
+
 ## 安全说明（重要）
 
 - **AppSecret（小程序密钥）只能放在你自己的后端或 CI 环境变量里**，用于服务端调用微信接口（如 `code2session`），**不要**写进小程序前端代码，**不要**提交到 Git。
