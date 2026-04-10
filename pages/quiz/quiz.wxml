@@ -27,7 +27,7 @@
   </view>
 
   <view class="options">
-    <button
+    <view
       wx:for="{{ question.options }}"
       wx:for-index="optIdx"
       wx:key="optIdx"
@@ -40,6 +40,6 @@
     >
       <view class="opt-badge">{{ labels[optIdx] }}</view>
       <text class="opt-text">{{ item.text }}</text>
-    </button>
+    </view>
   </view>
 </view>

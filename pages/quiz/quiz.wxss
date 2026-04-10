@@ -1,4 +1,6 @@
 .page {
+  width: 100%;
+  box-sizing: border-box;
   padding: 16rpx 32rpx 48rpx;
 }
 
@@ -125,44 +127,53 @@
 }
 
 .options {
+  width: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 18rpx;
+  gap: 20rpx;
 }
 
+/* 覆盖 button 默认非全宽、边距，与题干卡片同宽 */
 .opt {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
   display: flex;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   text-align: left;
-  padding: 26rpx 24rpx 26rpx 22rpx;
+  min-height: 152rpx;
+  padding: 24rpx 28rpx 24rpx 24rpx;
   border-radius: 22rpx;
-  background: rgba(18, 14, 32, 0.65);
-  border: 1rpx solid rgba(167, 139, 250, 0.18);
-  color: rgba(236, 233, 247, 0.92);
+  background: rgba(18, 14, 32, 0.72);
+  border: 1rpx solid rgba(167, 139, 250, 0.22);
+  color: rgba(236, 233, 247, 0.94);
   font-size: 28rpx;
-  line-height: 1.48;
-  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.18);
-}
-
-.opt::after {
-  border: none;
+  line-height: 1.55;
+  box-shadow: 0 8rpx 28rpx rgba(0, 0, 0, 0.2);
 }
 
 .opt-badge {
   flex-shrink: 0;
-  width: 52rpx;
-  height: 52rpx;
-  margin-right: 20rpx;
-  border-radius: 14rpx;
-  font-size: 26rpx;
+  align-self: center;
+  width: 56rpx;
+  height: 56rpx;
+  margin-right: 22rpx;
+  border-radius: 16rpx;
+  font-size: 28rpx;
   font-weight: 800;
-  line-height: 52rpx;
+  line-height: 56rpx;
   text-align: center;
   color: #0a0812;
   background: linear-gradient(145deg, #c4b5fd 0%, #6ee7ff 100%);
+  box-shadow: 0 4rpx 12rpx rgba(110, 231, 255, 0.2);
 }
 
 .opt-text {
   flex: 1;
-  padding-top: 4rpx;
+  min-width: 0;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
