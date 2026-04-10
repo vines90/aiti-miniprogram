@@ -1,0 +1,25 @@
+<view class="page safe-bottom">
+  <view class="progress-row">
+    <text class="progress-num">{{ currentIndex + 1 }}</text>
+    <text class="progress-sep">/</text>
+    <text class="progress-total">{{ total }}</text>
+  </view>
+  <view class="progress-bar">
+    <view class="progress-fill" style="width: {{ progressPercent }}%;"></view>
+  </view>
+  <view class="card">
+    <text class="q-text">{{ question.text }}</text>
+  </view>
+  <view class="options">
+    <button
+      wx:for="{{ question.options }}"
+      wx:key="text"
+      class="opt"
+      data-index="{{ index }}"
+      bindtap="onPick"
+    >
+      <text class="opt-label">{{ labels[index] }}</text>
+      <text class="opt-text">{{ item.text }}</text>
+    </button>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/quiz/quiz",
+    "pages/result/result"
+  ],
+  "window": {
+    "navigationBarTitleText": "AITI",
+    "navigationBarBackgroundColor": "#12101a",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#12101a",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

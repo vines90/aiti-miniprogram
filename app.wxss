@@ -1,0 +1,12 @@
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC',
+    'Microsoft YaHei', sans-serif;
+  background: #12101a;
+  color: #e8e6f2;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

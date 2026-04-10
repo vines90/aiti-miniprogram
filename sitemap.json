@@ -1,0 +1,4 @@
+{
+  "desc": "AITI",
+  "rules": [{ "action": "allow", "page": "*" }]
+}

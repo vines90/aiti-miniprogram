@@ -1,0 +1,16 @@
+<view class="page safe-bottom" wx:if="{{ type }}">
+  <view class="result-card">
+    <text class="label">你的人格类型是</text>
+    <text class="tag">{{ type.tag }}</text>
+    <text class="name">{{ type.name }}</text>
+    <text class="en">{{ type.en }}</text>
+    <view class="line"></view>
+    <text class="desc">{{ line }}</text>
+  </view>
+  <button class="btn-share" open-type="share">分享给好友</button>
+  <button class="btn-ghost" bindtap="onAgain">再测一次</button>
+</view>
+<view class="page empty" wx:else>
+  <text class="empty-text">暂无结果，请先完成测试</text>
+  <button class="btn-ghost" bindtap="onHome">返回首页</button>
+</view>

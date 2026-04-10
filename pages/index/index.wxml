@@ -1,0 +1,13 @@
+<view class="page safe-bottom">
+  <view class="hero">
+    <view class="badge">纯好玩 · 引流向</view>
+    <text class="title">AITI</text>
+    <text class="subtitle">AI 使用者人格测试</text>
+    <text class="hook">你是什么 AI 人？</text>
+  </view>
+  <view class="meta">
+    <text class="meta-line">24 题 · 12 种人格 · 选完即出结果</text>
+  </view>
+  <button class="btn-start" bindtap="onStart">开始测试</button>
+  <view class="footer-note">结果仅供娱乐</view>
+</view>
